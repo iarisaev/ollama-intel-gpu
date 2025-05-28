@@ -17,7 +17,7 @@ services:
       - ONEAPI_DEVICE_SELECTOR=level_zero:0
       - IPEX_LLM_NUM_CTX=16384
   ollama-webui:
-    image: ghcr.io/open-webui/open-webui
+    image: ghcr.io/open-webui/open-webui:v0.6.11
     container_name: ollama-webui
     volumes:
       - ollama-webui:/app/backend/data
