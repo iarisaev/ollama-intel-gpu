@@ -24,7 +24,7 @@ services:
     depends_on:
       - ollama-intel-gpu
     ports:
-      - ${OLLAMA_WEBUI_PORT-3000}:8080
+      - 8080:3000
     environment:
       - OLLAMA_BASE_URL=http://ollama-intel-gpu:11434
     extra_hosts:
