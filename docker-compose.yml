@@ -16,11 +16,11 @@ services:
     environment:
       - ONEAPI_DEVICE_SELECTOR=level_zero:0
       - IPEX_LLM_NUM_CTX=16384
-  ollama-webui:
+  ollama-web-ui:
     image: ghcr.io/open-webui/open-webui:v0.6.11
     container_name: ollama-webui
     volumes:
-      - ollama-webui:/app/backend/data
+      - ollama-web-ui:/app/backend/data
     depends_on:
       - ollama-intel-gpu
     ports:
@@ -31,5 +31,5 @@ services:
       - host.docker.internal:host-gateway
     restart: unless-stopped
 volumes:
-  ollama-webui: {}
+  ollama-web-ui: {}
   ollama-intel-gpu: {}
